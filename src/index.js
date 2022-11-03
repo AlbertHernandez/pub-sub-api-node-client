@@ -124,7 +124,9 @@ function subscribe(client, topicName, schema) {
     //Once the system has received the events == to numReqested then the stream will end.
     const subscribeRequest = {
         topicName,
-        numRequested: PUB_SUB_EVENT_RECEIVE_LIMIT
+        numRequested: PUB_SUB_EVENT_RECEIVE_LIMIT,
+        replayId: "12907414",
+        replayPreset: 2
     };
     subscription.write(subscribeRequest);
     console.log(
